@@ -1,0 +1,113 @@
+{
+  "subject": "A18",
+  "channels": [
+    "C3",
+    "Cz",
+    "C4"
+  ],
+  "classes": {
+    "RIGHT": 120,
+    "LEFT": 120
+  },
+  "sampling_rate_hz": 512.0,
+  "baseline_seconds_relative_to_cue": [
+    -3.0,
+    -1.0
+  ],
+  "mi_seconds_relative_to_cue": [
+    1.0,
+    4.0
+  ],
+  "bands_hz": {
+    "theta": [
+      4.0,
+      8.0
+    ],
+    "mu": [
+      8.0,
+      13.0
+    ],
+    "beta": [
+      13.0,
+      30.0
+    ]
+  },
+  "welch": {
+    "nperseg_seconds": 1.0,
+    "overlap": 0.5,
+    "window": "hann"
+  },
+  "preprocessing": {
+    "notch_hz": 50.0,
+    "bandpass_hz": [
+      1.0,
+      40.0
+    ],
+    "reference": "average EEG reference before selecting C3/Cz/C4",
+    "artifact_threshold_uv": 150.0
+  },
+  "erd_formula": "100 * (power_baseline - power_mi) / power_baseline",
+  "artifact_trials": 0,
+  "trials_total": 240,
+  "trials_analyzed": 240,
+  "artifacts_included_in_statistics": false,
+  "source": {
+    "files": [
+      "A18_R1_acquisition.gdf",
+      "A18_R2_acquisition.gdf",
+      "A18_R3_onlineT.gdf",
+      "A18_R4_onlineT.gdf",
+      "A18_R5_onlineT.gdf",
+      "A18_R6_onlineT.gdf"
+    ],
+    "trials_discovered": 240,
+    "trials_outside_recording": 0
+  },
+  "overall": {
+    "n_trials": 240,
+    "theta_beta_baseline_mean": 0.4978856864404475,
+    "theta_beta_baseline_median": 0.4742110231201111,
+    "theta_beta_mi_mean": 0.48222630343669487,
+    "theta_beta_mi_median": 0.44533284981539933,
+    "theta_beta_change_pct_mean": 9.336923190994694,
+    "theta_beta_change_pct_median": -1.4287782597590182,
+    "mu_erd_pct_mean": -69.71210595774815,
+    "mu_erd_pct_median": -23.695797755641237,
+    "beta_erd_pct_mean": -0.9126374744886436,
+    "beta_erd_pct_median": 0.9665600629247354,
+    "wilcoxon_statistic": 13721.0,
+    "wilcoxon_p_value": 0.4924747499893364
+  },
+  "by_class": {
+    "LEFT": {
+      "n_trials": 120,
+      "theta_beta_baseline_mean": 0.4996615459702253,
+      "theta_beta_baseline_median": 0.47535637690414023,
+      "theta_beta_mi_mean": 0.4532497832531181,
+      "theta_beta_mi_median": 0.4101087811315446,
+      "theta_beta_change_pct_mean": 0.9690723399979857,
+      "theta_beta_change_pct_median": -8.036403449268517,
+      "mu_erd_pct_mean": -86.45262293960124,
+      "mu_erd_pct_median": -40.59966755600291,
+      "beta_erd_pct_mean": -3.1397061797404606,
+      "beta_erd_pct_median": -1.6607238798803317,
+      "wilcoxon_statistic": 2793.0,
+      "wilcoxon_p_value": 0.028379980573178847
+    },
+    "RIGHT": {
+      "n_trials": 120,
+      "theta_beta_baseline_mean": 0.4961098269106697,
+      "theta_beta_baseline_median": 0.47214456939523775,
+      "theta_beta_mi_mean": 0.5112028236202716,
+      "theta_beta_mi_median": 0.48727936305744596,
+      "theta_beta_change_pct_mean": 17.704774041991406,
+      "theta_beta_change_pct_median": 7.6840511856316365,
+      "mu_erd_pct_mean": -52.971588975895045,
+      "mu_erd_pct_median": -15.286417707114254,
+      "beta_erd_pct_mean": 1.3144312307631738,
+      "beta_erd_pct_median": 3.6422938509011438,
+      "wilcoxon_statistic": 3208.0,
+      "wilcoxon_p_value": 0.26908907005823957
+    }
+  }
+}
